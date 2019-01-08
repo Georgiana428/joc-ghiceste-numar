@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Joc - Ghicește numărul</title>
+</head>
+
+<body>
+  <button>1</button>
+  <button>2</button>
+  <button>3</button>
+
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+  <script>
+    $(document).ready(function() {
+      window.numar = Math.floor(Math.random() * 3) + 1;
+
+      $("button").on("click", function() {
+        if($(this).text() == numar) {
+          alert("Ai ghicit!");
+        } else {
+          alert("Nu ai ghicit!");
+        }
+      });
+    });
+  </script>
+
+</body>
+
+<style>
+button {
+  width: 200px;
+  height: 200px;
+  font-size: 130px;
+}
+</style>
+</html>
